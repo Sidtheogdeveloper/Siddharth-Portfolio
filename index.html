@@ -1,149 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siddharth's Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #e0f7fa, #ffffff);
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: #fff;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-        .header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid #0077b6;
-        }
-        h1 {
-            color: #023e8a;
-            margin-top: 15px;
-        }
-        h2, h4 {
-            color: #0077b6;
-        }
-        hr {
-            border: none;
-            height: 2px;
-            background-color: #b0bec5;
-            margin: 20px 0;
-        }
-        .section {
-            margin-top: 20px;
-        }
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        a {
-            color: #0077b6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .contact-info i {
-            margin-right: 8px;
-            color: #0077b6;
-        }
-        .contact-info li {
-            margin-bottom: 12px;
-        }
-        .section-title {
-            color: #023e8a;
-            border-left: 4px solid #0077b6;
-            padding-left: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Siddharth Madhu – Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      color: #333;
+    }
+
+    header {
+      background-color: #023e8a;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      background-color: #0077b6;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.1);
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    .section-title {
+      color: #023e8a;
+      border-left: 4px solid #0077b6;
+      padding-left: 10px;
+      margin-bottom: 12px;
+      font-size: 1.4em;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #0077b6;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .contact-info i {
+      margin-right: 8px;
+      color: #0077b6;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="header">
-            <h1>Student Portfolio</h1>
-            <hr>
-            <img src="photo.jpg" alt="Student Photo">
-            <h2>Siddharth Madhu Rao</h2>
-            <h4>Student at SSN College of Engineering</h4>
-        </div>
+<header>
+  <h1>Siddharth Madhu Rao</h1>
+  <p>Student at SSN College of Engineering | Aspiring Developer</p>
+</header>
 
-        <div class="section">
-            <h3 class="section-title">Objective</h3>
-            <p>Aspiring and dedicated software and game developer seeking to leverage experience in application development and a passion for emerging technologies to contribute to innovative projects.</p>
-        </div>
+<nav>
+  <a href="#" onclick="showSection('about')">About</a>
+  <a href="#" onclick="showSection('education')">Education</a>
+  <a href="#" onclick="showSection('experience')">Experience</a>
+  <a href="#" onclick="showSection('projects')">Projects</a>
+  <a href="#" onclick="showSection('skills')">Skills</a>
+  <a href="#" onclick="showSection('certifications')">Certifications</a>
+  <a href="#" onclick="showSection('extras')">Languages & Interests</a>
+</nav>
 
-        <div class="section">
-            <h3 class="section-title">Contact</h3>
-            <ul class="contact-info">
-                <li><i class="fas fa-envelope"></i> <a href="mailto:siddharth2370027@ssn.edu.in">siddharth2370027@ssn.edu.in</a></li>
-                <li><i class="fas fa-phone"></i> <a href="tel:+919150914685">+91 9150914685</a></li>
-                <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/siddharth-madhu17092005/" target="_blank">LinkedIn Profile</a></li>
-            </ul>
-        </div>
+<div class="container">
 
-        <div class="section">
-            <h3 class="section-title">Education</h3>
-            <ul>
-                <li>
-                    <strong>SSN College of Engineering, Chennai</strong><br>
-                    August 2023 - Present<br>
-                    M.Tech (5-Year Integrated) in Computer Science Engineering<br>
-                    CGPA: 8.036
-                </li>
-                <li>
-                    <strong>Lalaji Memorial Omega International School</strong><br>
-                    June 2022 - May 2023<br>
-                    Grade 12 - 94%
-                </li>
-            </ul>
-        </div>
+  <div class="section active" id="about">
+    <h2 class="section-title">Contact & Objective</h2>
+    <ul class="contact-info">
+      <li><i class="fas fa-envelope"></i> <a href="mailto:siddharth2370027@ssn.edu.in">siddharth2370027@ssn.edu.in</a></li>
+      <li><i class="fas fa-phone"></i> <a href="tel:+919150914685">+91 9150914685</a></li>
+      <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/siddharth-madhu17092005/" target="_blank">LinkedIn Profile</a></li>
+    </ul>
+    <p>
+      Aspiring and dedicated software and game developer seeking to leverage experience in application development, machine learning, and emerging technologies to contribute to innovative projects.
+    </p>
+  </div>
 
-        <div class="section">
-            <h3 class="section-title">Work Experience</h3>
-            <ul>
-                <li>
-                    <strong>StudAI Edutech Pvt. Ltd. - R&D Developer</strong><br>
-                    January 2025 - April 2025<br>
-                    Researched AI Lab implementation in South Indian colleges, analyzed COE feasibility, and explored DeepSeek integration for StudAI Genie.
-                </li>
-                <li>
-                    <strong>Mindler Inc. - Digital Marketing Intern</strong><br>
-                    November 2022 - December 2022<br>
-                    Conducted market research and competitive analysis to support strategic growth plans.
-                </li>
-            </ul>
-        </div>
+  <div class="section" id="education">
+    <h2 class="section-title">Education</h2>
+    <ul>
+      <li>
+        <strong>SSN College of Engineering, Chennai</strong><br>
+        M.Tech (Integrated) in Computer Science – Aug 2023 – Present<br>
+        CGPA: 8.036
+      </li>
+      <li>
+        <strong>Lalaji Memorial Omega International School</strong><br>
+        Grade 12 – 94% (2023)
+      </li>
+    </ul>
+  </div>
 
-        <div class="section">
-            <h3 class="section-title">Certifications</h3>
-            <ul>
-                <li>Machine Learning in Python - Udemy</li>
-                <li>Remote Sensing and GIS for Environmental Science - ISRO</li>
-                <li>Cyber Security and Privacy - NPTEL</li>
-                <li>C Programming - Udemy</li>
-            </ul>
-        </div>
-    </div>
+  <div class="section" id="experience">
+    <h2 class="section-title">Work Experience</h2>
+    <ul>
+      <li>
+        <strong>StudAI Edutech Pvt. Ltd. – AI R&D Intern</strong><br>
+        Mar 2025 – Present<br>
+        • Researched AI Lab feasibility in colleges and COE model<br>
+        • Analyzed DeepSeek integration for StudAI Genie<br>
+        • Proposed custom AI model pipelines for educational use cases
+      </li>
+      <li>
+        <strong>Mindler – Digital Marketing Intern</strong><br>
+        Nov 2022 – Dec 2022<br>
+        • Conducted market and competitor research for growth strategy
+      </li>
+    </ul>
+  </div>
+
+  <div class="section" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <ul>
+      <li>
+        <strong>Vehicle Maintenance & Monitoring System</strong><br>
+        • Python, SQLite, Tkinter<br>
+        • Desktop app for fuel tracking, service alerts, and repair logging
+      </li>
+      <li>
+        <strong>AI-Driven Criminal Justice System</strong><br>
+        • Tkinter, Python, MongoDB<br>
+        • Interface for tracking criminal cases, timelines, and trials
+      </li>
+      <li>
+        <strong>Real-Time Stock Data Analysis</strong><br>
+        • SparkSQL, Kafka, Java<br>
+        • Streaming analytics on stock feeds in a 3-day workshop
+      </li>
+    </ul>
+  </div>
+
+  <div class="section" id="skills">
+    <h2 class="section-title">Technical Skills & Tools</h2>
+    <ul>
+      <li><strong>Languages:</strong> Python, Java, C, HTML/CSS, JS, SQL</li>
+      <li><strong>Frameworks:</strong> Flask, Tkinter, Manim, SparkSQL, Kafka</li>
+      <li><strong>Tools:</strong> MongoDB, Git, Unreal Engine, VS Code</li>
+    </ul>
+  </div>
+
+  <div class="section" id="certifications">
+    <h2 class="section-title">Certifications</h2>
+    <ul>
+      <li>Machine Learning in Python – Udemy</li>
+      <li>Cyber Security & Privacy – NPTEL</li>
+      <li>Remote Sensing & GIS – ISRO</li>
+      <li>C Programming – Udemy</li>
+    </ul>
+  </div>
+
+  <div class="section" id="extras">
+    <h2 class="section-title">Languages & Interests</h2>
+    <ul>
+      <li><strong>Languages Known:</strong> English, Tamil, Hindi</li>
+      <li><strong>Hobbies:</strong> Game Development, Tech Blogging, Cycling</li>
+    </ul>
+  </div>
+
+</div>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(section => {
+      section.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+  }
+</script>
 
 </body>
 </html>
