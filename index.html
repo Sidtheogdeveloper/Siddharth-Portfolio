@@ -10,212 +10,178 @@
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      background: #f0f8ff;
       color: #333;
     }
-
-    header {
-      background-color: #023e8a;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-    }
-    .header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid #0077b6;
-    }
-
-    nav {
-      background-color: #0077b6;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
     .container {
       max-width: 1000px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #ffffff;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
       border-radius: 12px;
       box-shadow: 0 0 25px rgba(0,0,0,0.1);
     }
-
-    .section {
-      display: none;
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #0077b6;
     }
-
-    .section.active {
-      display: block;
-      animation: fadeIn 0.5s ease-in;
+    .header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #0077b6;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
-    .section-title {
+    .header-info h1 {
+      margin: 0;
+      font-size: 28px;
       color: #023e8a;
-      border-left: 4px solid #0077b6;
-      padding-left: 10px;
-      margin-bottom: 12px;
-      font-size: 1.4em;
     }
-
+    .header-info p {
+      margin: 5px 0;
+      font-size: 16px;
+      color: #555;
+    }
+    .section {
+      margin-top: 30px;
+    }
+    .section-title {
+      font-size: 22px;
+      color: #0077b6;
+      border-left: 4px solid #023e8a;
+      padding-left: 12px;
+      margin-bottom: 12px;
+    }
     ul {
       padding-left: 20px;
     }
-
     li {
       margin-bottom: 10px;
     }
-
     a {
       color: #0077b6;
+      text-decoration: none;
     }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
+    a:hover {
+      text-decoration: underline;
     }
-
     .contact-info i {
       margin-right: 8px;
       color: #0077b6;
     }
+    .contact-info li {
+      margin-bottom: 10px;
+    }
+    @media (max-width: 700px) {
+      .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="header">
+      <img src="photo.jpg" alt="Siddharth Photo">
+      <div class="header-info">
+        <h1>Siddharth Madhu Rao</h1>
+        <p>Student at SSN College of Engineering | Aspiring Developer</p>
+      </div>
+    </div>
 
-<header>
-  <div class="header">
-            <h1>Student Portfolio</h1>
-            <hr>
-            <img src="photo.jpg" alt="Student Photo">
-            <h2>Siddharth Madhu Rao</h2>
-            <h4>Student at SSN College of Engineering</h4>
-        </div>
-</header>
+    <div class="section">
+      <h2 class="section-title">Objective</h2>
+      <p>Aspiring and dedicated software and game developer seeking to leverage experience in application development, machine learning, and emerging technologies to contribute to innovative projects.</p>
+    </div>
 
+    <div class="section">
+      <h2 class="section-title">Contact</h2>
+      <ul class="contact-info">
+        <li><i class="fas fa-envelope"></i> <a href="mailto:siddharth2370027@ssn.edu.in">siddharth2370027@ssn.edu.in</a></li>
+        <li><i class="fas fa-phone"></i> <a href="tel:+919150914685">+91 9150914685</a></li>
+        <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/siddharth-madhu17092005/" target="_blank">LinkedIn Profile</a></li>
+      </ul>
+    </div>
 
-<nav>
-  <a href="#" onclick="showSection('about')">About</a>
-  <a href="#" onclick="showSection('education')">Education</a>
-  <a href="#" onclick="showSection('experience')">Experience</a>
-  <a href="#" onclick="showSection('projects')">Projects</a>
-  <a href="#" onclick="showSection('skills')">Skills</a>
-  <a href="#" onclick="showSection('certifications')">Certifications</a>
-  <a href="#" onclick="showSection('extras')">Languages & Interests</a>
-</nav>
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      <ul>
+        <li><strong>SSN College Of Engineering, Chennai</strong><br>Aug 2023 - Now<br>M.Tech (5-Year Integrated) in Computer Science Engineering<br>CGPA: 8.2<br>Member of IEEE Computer Society</li>
+        <li><strong>Lalaji Memorial Omega International School, Chennai</strong><br>June 2022 – May 2023<br>Grade 12 - 94%</li>
+      </ul>
+    </div>
 
-<div class="container">
+    <div class="section">
+      <h2 class="section-title">Work Experience</h2>
+      <ul>
+        <li><strong>Mindler Inc. – Digital Marketing Intern</strong><br>Nov 2022 – Dec 2022<br>Conducted market research and competitive analysis to find new business opportunities and contributed to strategic growth planning.</li>
+      </ul>
+    </div>
 
-  <div class="section active" id="about">
-    <h2 class="section-title">Contact & Objective</h2>
-    <ul class="contact-info">
-      <li><i class="fas fa-envelope"></i> <a href="mailto:siddharth2370027@ssn.edu.in">siddharth2370027@ssn.edu.in</a></li>
-      <li><i class="fas fa-phone"></i> <a href="tel:+919150914685">+91 9150914685</a></li>
-      <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/siddharth-madhu17092005/" target="_blank">LinkedIn Profile</a></li>
-    </ul>
-    <p>
-      Aspiring and dedicated software and game developer seeking to leverage experience in application development, machine learning, and emerging technologies to contribute to innovative projects.
-    </p>
-  </div>
+    <div class="section">
+      <h2 class="section-title">Certifications</h2>
+      <ul>
+        <li>Machine Learning in Python - Udemy</li>
+        <li>C Programming - Udemy</li>
+        <li>Remote Sensing and GIS for Environmental Science - ISRO</li>
+        <li>Cyber Security and Privacy - NPTEL</li>
+      </ul>
+    </div>
 
-  <div class="section" id="education">
-    <h2 class="section-title">Education</h2>
-    <ul>
-      <li>
-        <strong>SSN College of Engineering, Chennai</strong><br>
-        M.Tech (Integrated) in Computer Science – Aug 2023 – Present<br>
-        CGPA: 8.036
-      </li>
-      <li>
-        <strong>Lalaji Memorial Omega International School</strong><br>
-        Grade 12 – 94% (2023)
-      </li>
-    </ul>
-  </div>
+    <div class="section">
+      <h2 class="section-title">Skills Acquired</h2>
+      <ul>
+        <li><strong>Programming Languages:</strong> Python, C, Java</li>
+        <li><strong>Frameworks:</strong> Kivy, TensorFlow, Scikit-Learn, Flask</li>
+        <li><strong>Tools:</strong> Git, Unreal Engine 5</li>
+        <li><strong>Machine Learning:</strong> Supervised Learning, Unsupervised Learning, Reinforcement Learning</li>
+        <li><strong>Soft Skills:</strong> Problem-solving, Team Collaboration, Time Management, Communication</li>
+        <li><strong>Database Management:</strong> MySQL</li>
+      </ul>
+    </div>
 
-  <div class="section" id="experience">
-    <h2 class="section-title">Work Experience</h2>
-    <ul>
-      <li>
-        <strong>StudAI Edutech Pvt. Ltd. – AI R&D Intern</strong><br>
-        Mar 2025 – Present<br>
-        • Researched AI Lab feasibility in colleges and COE model<br>
-        • Analyzed DeepSeek integration for StudAI Genie<br>
-        • Proposed custom AI model pipelines for educational use cases
-      </li>
-      <li>
-        <strong>Mindler – Digital Marketing Intern</strong><br>
-        Nov 2022 – Dec 2022<br>
-        • Conducted market and competitor research for growth strategy
-      </li>
-    </ul>
-  </div>
-
-  <div class="section" id="projects">
-    <h2 class="section-title">Projects</h2>
-    <ul>
+    <div class="section">
+      <h2 class="section-title">Projects</h2>
+      <ul>
         <li><strong>Cab Hailing App</strong><br>Python-based ride booking app with driver assignment algorithm and API backend.<br><a href="https://github.com/Sidtheogdeveloper/CabBooking-App" target="_blank">GitHub</a></li>
         <li><strong>Budget Tracking App</strong><br>Python app for tracking user budgets with database integration.<br><a href="https://github.com/Sidtheogdeveloper/Budget-TrackerApp" target="_blank">GitHub</a></li>
         <li><strong>Vehicle Maintenance & Driver Assistance System</strong><br>
 Developed an intelligent vehicle monitoring and maintenance platform featuring driver assistance modules and alerting systems.<br>
 <a href="https://github.com/tri-tt-hik/Vehicle_maintenance_driver_assistance" target="_blank">GitHub</a></li>
-    </ul>
+
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Achievements</h2>
+      <ul>
+        <li>Student of the Class Award – Grade 12, Lalaji Memorial Omega International School</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Workshops</h2>
+      <ul>
+        <li>App Development with Flutter – Feb 2024</li>
+        <li>Logics and Proofs Workshop – IMSc, July 2022</li>
+        <li>Stream Data Management and Analytics – SSNCE, Aug 2024</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Extra-Curricular Activities</h2>
+      <ul>
+        <li><strong>Vice-Captain, School Cricket Team:</strong> Led and represented in inter-school tournaments.</li>
+        <li><strong>Member, College Cricket Team:</strong> Participated in college tournaments with consistent performance.</li>
+        <li><strong>Representative, Kancheepuram District Cricket Team (U-16):</strong> Played competitive district-level matches.</li>
+        <li><strong>Participant, TNCA U-16 Round Robin Tournament (2021–2022):</strong> Competed in state-level tournament gaining exposure.</li>
+      </ul>
+    </div>
   </div>
-
-  <div class="section" id="skills">
-    <h2 class="section-title">Technical Skills & Tools</h2>
-    <ul>
-      <li><strong>Languages:</strong> Python, Java, C, HTML/CSS, JS, SQL</li>
-      <li><strong>Frameworks:</strong> Flask, Tkinter, Manim, SparkSQL, Kafka</li>
-      <li><strong>Tools:</strong> MongoDB, Git, Unreal Engine, VS Code</li>
-    </ul>
-  </div>
-
-  <div class="section" id="certifications">
-    <h2 class="section-title">Certifications</h2>
-    <ul>
-      <li>Machine Learning in Python – Udemy</li>
-      <li>Cyber Security & Privacy – NPTEL</li>
-      <li>Remote Sensing & GIS – ISRO</li>
-      <li>C Programming – Udemy</li>
-    </ul>
-  </div>
-
-  <div class="section" id="extras">
-    <h2 class="section-title">Languages & Interests</h2>
-    <ul>
-      <li><strong>Languages Known:</strong> English, Tamil, Hindi</li>
-      <li><strong>Hobbies:</strong> Game Development, Tech Blogging, Cycling</li>
-    </ul>
-  </div>
-
-</div>
-
-<script>
-  function showSection(id) {
-    document.querySelectorAll('.section').forEach(section => {
-      section.classList.remove('active');
-    });
-    document.getElementById(id).classList.add('active');
-  }
-</script>
-
 </body>
 </html>
