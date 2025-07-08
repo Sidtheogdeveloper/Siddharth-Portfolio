@@ -24,6 +24,12 @@
     header h1 {
       margin: 0;
     }
+    .header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #0077b6;
+    }
 
     nav {
       background-color: #0077b6;
@@ -95,13 +101,13 @@
 <body>
 
 <header>
-  <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-    <img src="photo.jpg" alt="Siddharth Photo" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
-    <div>
-      <h1 style="margin: 0;">Siddharth Madhu Rao</h1>
-      <p style="margin: 5px 0;">Student at SSN College of Engineering | Aspiring Developer</p>
-    </div>
-  </div>
+  <div class="header">
+            <h1>Student Portfolio</h1>
+            <hr>
+            <img src="photo.jpg" alt="Student Photo">
+            <h2>Siddharth Madhu Rao</h2>
+            <h4>Student at SSN College of Engineering</h4>
+        </div>
 </header>
 
 
